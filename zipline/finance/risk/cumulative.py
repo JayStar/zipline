@@ -234,7 +234,7 @@ class RiskMetricsCumulative(object):
         self.latest_dt = dt
 
         self.algorithm_returns_cont[dt] = algorithm_returns
-        self.algorithm_returns = self.algorithm_returns_cont.valid()
+        self.algorithm_returns = self.algorithm_returns_cont[:dt]
 
         self.num_trading_days = len(self.algorithm_returns)
 
